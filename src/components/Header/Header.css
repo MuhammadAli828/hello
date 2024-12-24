@@ -1,0 +1,126 @@
+/* General Header Styling */
+.h-wrapper {
+  background: transparent;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.h-wrapper.scrolled {
+  background: #0F172B;
+}
+
+.h-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: var(--secondary);
+  width: 100%;
+}
+
+.h-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.h-menu a {
+  font-size: 1.5rem;
+  color: #FEA116;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.h-menu a:hover {
+  color: #FEA116;
+}
+
+.fa-solid {
+  color: #FEA116 !important;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo i {
+  font-size: 3.0rem;
+}
+
+.logo h1 {
+  font-size: 3.0rem;
+  color: #FEA116;
+  font-weight: 800;
+}
+
+.button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 101;
+  margin-right: 100px;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #FEA116;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .h-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #0F172B;
+    width: 250px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  .logo i {
+    font-size: 2.0rem;
+  }
+  
+  .logo h1 {
+    font-size: 2.0rem;
+    color: #FEA116;
+    font-weight: 800;
+  }
+  
+
+  .h-menu.open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .h-menu a {
+    font-size: 1.8rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+

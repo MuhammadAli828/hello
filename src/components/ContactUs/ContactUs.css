@@ -1,0 +1,92 @@
+.hero1-wrapper {
+  color: white;
+  position: relative;
+  background: url(../../image1.jpg) no-repeat center center/cover;
+  height: 60vh; /* Default height for larger screens */
+}
+
+.hero1-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh; /* Matches the .hero1-wrapper height */
+  background: rgba(17, 17, 17, 0.9);
+  z-index: 1; 
+}
+
+.contact-header {
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.content p span a {
+  color: #ff9900; 
+  text-decoration: none;
+}
+
+.content p span a:hover {
+  color: #ff9900; 
+  text-decoration: none; 
+}
+
+.content h1 {
+  font-size: 4rem; /* Large font size for desktops */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 1rem; 
+  margin: 0;
+}
+
+.content p span {
+  color: #ff9900; 
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and medium-sized screens (768px and below) */
+@media (max-width: 768px) {
+  .hero1-wrapper {
+    height: 50vh;
+
+  .hero1-wrapper::before {
+    height: 50vh; 
+  }
+
+  .content h1 {
+    font-size: 3rem; 
+  }
+
+  .content p {
+    font-size: 0.9rem; 
+  }
+}
+}
+
+/* For phones and small screens (480px and below) */
+@media (max-width: 480px) {
+  .hero1-wrapper {
+    height: 40vh; 
+  }
+
+  .hero1-wrapper::before {
+    height: 40vh; 
+  }
+
+  .content h1 {
+    font-size: 2.5rem; 
+  }
+
+  .content p {
+    font-size: 0.8rem; 
+  }
+
+  .content p span a {
+    font-size: 0.9rem; 
+  }
+}
