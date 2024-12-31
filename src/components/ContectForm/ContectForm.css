@@ -86,7 +86,6 @@
 .custom-reservation-container {
   display: flex;
   justify-content: center; 
-  align-items: center;   
   width: 100%;
   gap: 30px;
   flex-wrap: wrap; 
@@ -139,9 +138,6 @@
   display: flex;
   gap: 50px;
   margin-bottom: 20px;
-  justify-content: center;
-  width: 100%;
-  flex-wrap: wrap; 
 }
 
 .custom-form-group {
@@ -176,7 +172,7 @@ textarea {
   cursor: pointer;
   transition: background 0.3s;
   margin-top: 20px;
-  width: 100%;
+  width: 104%;
 }
 
 .custom-book-now-btn:hover {
@@ -286,10 +282,25 @@ textarea {
     font-size: 0.8rem;
   }
 
-  .custom-book-now-btn {
-    font-size: 0.9rem;
-    padding: 10px 20px;
+  
+  .custom-form-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap; 
   }
+  
+  .custom-form-group {
+    flex: 1;
+    width: 140%; 
+    padding-left: 35px;
+
+  }
+  .custom-book-now-btn {
+    margin-left: 35px;
+    width: 205%;
+  }
+  
  
 
   

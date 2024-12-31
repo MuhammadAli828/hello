@@ -1,11 +1,11 @@
 import React from 'react';
-import './TeamCard.css'; // External CSS file for styling
+import './TeamCard.css';
 
 const TeamCard = () => {
   const teamMembers = [
     {
       id: 1,
-      image: 'team-1.jpg', // Replace with actual image URLs
+      image: 'team-1.jpg',
       name: 'Full Name',
       designation: 'Designation',
     },
@@ -47,9 +47,9 @@ const TeamCard = () => {
               <p className="team-designation">{member.designation}</p>
             </div>
             <div className="team-social">
-              <span className="social-icon"><i class="fa-brands fa-facebook"></i></span>
-              <span className="social-icon"><i class="fa-brands fa-x-twitter"></i></span>
-              <span className="social-icon"><i class="fa-brands fa-instagram"></i></span>
+              <span className="social-icon"><i className="fa-brands fa-facebook"></i></span>
+              <span className="social-icon"><i className="fa-brands fa-x-twitter"></i></span>
+              <span className="social-icon"><i className="fa-brands fa-instagram"></i></span>
             </div>
           </div>
         ))}

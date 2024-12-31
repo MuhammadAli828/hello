@@ -9,11 +9,11 @@ import TeamCard from "./components/TeamCard/TeamCard";
 import ReservationForm from "./components/ReservationForm/ReservationForm";
 import Testimonials from "./components/testimonials/testimonials";
 import ContactUs from "./components/ContactUs/ContactUs"; // Import ContactUs component
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ContectForm from "./components/ContectForm/ContectForm";
 import Footer from "./components/Footer/Footer";
-import Navbar from "./Navbar/Navbar";
+import GoToTop from "./components/GoToTop/GoToTop";
+
 
 // Define router with routes for Home and Contact Us pages
 const router = createBrowserRouter([
@@ -28,10 +28,11 @@ const router = createBrowserRouter([
         <AboutUs />
         <Menu />
         <ReservationForm />
-        <ToastContainer />
         <TeamCard />
         <Testimonials />
         <Footer/>
+        <GoToTop/>
+      
       
         
       </div>
@@ -45,6 +46,7 @@ const router = createBrowserRouter([
         <ContactUs />
         <ContectForm/>
         <Footer/>
+        <GoToTop/>
       </div>
     ),
   },

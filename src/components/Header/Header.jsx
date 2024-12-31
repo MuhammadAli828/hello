@@ -33,7 +33,6 @@ const Header = () => {
           <i className="fa-solid fa-utensils"></i>
           <h1>Restoran</h1>
         </div>
-
         <button className="hamburger" onClick={toggleMenu}>
           <span className="line"></span>
           <span className="line"></span>
@@ -41,11 +40,20 @@ const Header = () => {
         </button>
 
         <div className={`h-menu ${isMenuOpen ? "open" : ""}`}>
-          <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
-          <Link to="/contact-us" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
-          <button className="button">
-            <a href="" onClick={() => setIsMenuOpen(false)}>Book A Table</a>
-          </button>
+          <Link to="/" >Home</Link>
+          <Link to="/contact-us" >Contact Us</Link>
+          
+          <button className="button" onClick={() => 
+          {
+               const section = document.getElementById("reservation-section");
+              if (section) 
+                {
+                     section.scrollIntoView({ behavior: "smooth" });
+                 }
+                   }}>   
+                       Book A Table
+                   </button>
+
         </div>
       </div>
     </section>

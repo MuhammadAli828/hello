@@ -10,18 +10,26 @@ const ContectForm = () => {
   // Validation Schema
   const validationSchema = Yup.object({
     name: Yup.string()
-      .matches(/^[a-zA-Z\s-]+$/, "Only alphabets, spaces, and hyphens are allowed")
+      .matches(
+        /^[a-zA-Z\s-]+$/,
+        "Only alphabets, spaces, and hyphens are allowed"
+      )
       .max(50, "Name must be at most 50 characters")
       .required("Name is required"),
     email: Yup.string()
       .email("Invalid email format")
       .required("Email is required"),
     subject: Yup.string()
-      .matches(/^[a-zA-Z\s-]+$/, "Only alphabets, spaces, and hyphens are allowed")
+      .matches(
+        /^[a-zA-Z\s-]+$/,
+        "Only alphabets, spaces, and hyphens are allowed"
+      )
       .max(100, "Subject must be at most 100 characters")
       .required("Subject is required"),
-    specialRequest: Yup.string()
-      .max(250, "Special request must be at most 250 characters"),
+    specialRequest: Yup.string().max(
+      250,
+      "Special request must be at most 250 characters"
+    ),
   });
 
   // Submit Handler
@@ -41,19 +49,28 @@ const ContectForm = () => {
           <div className="contact-info-item">
             <h4>Booking</h4>
             <div>
-              <span><i className="fa-solid fa-envelope"></i></span> book@example.com
+              <span>
+                <i className="fa-solid fa-envelope"></i>
+              </span>{" "}
+              book@example.com
             </div>
           </div>
           <div className="contact-info-item">
             <h4>General</h4>
             <div>
-              <span><i className="fa-solid fa-envelope"></i></span> info@example.com
+              <span>
+                <i className="fa-solid fa-envelope"></i>
+              </span>{" "}
+              info@example.com
             </div>
           </div>
           <div className="contact-info-item">
             <h4>Technical</h4>
             <div>
-              <span><i className="fa-solid fa-envelope"></i></span> tech@example.com
+              <span>
+                <i className="fa-solid fa-envelope"></i>
+              </span>{" "}
+              tech@example.com
             </div>
           </div>
         </div>
@@ -131,7 +148,7 @@ const ContectForm = () => {
                   className="custom-book-now-btn"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Submitting..." : "BOOK NOW"}
+                  {isSubmitting ? "Submitting..." : "SEND MESSAGE"}
                 </button>
               </Form>
             )}
@@ -145,7 +162,10 @@ const ContectForm = () => {
             <div className="modal-content">
               <h2>Thanks for Contacting Us</h2>
               <p>We will contact you as soon as possible.</p>
-              <button onClick={() => setIsModalOpen(false)} className="close-modal-btn">
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="close-modal-btn"
+              >
                 Close
               </button>
             </div>
@@ -155,7 +175,5 @@ const ContectForm = () => {
     </div>
   );
 };
-
-
 
 export default ContectForm;

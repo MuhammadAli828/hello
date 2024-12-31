@@ -16,11 +16,12 @@ const ReservationForm = () => {
     email: Yup.string()
       .email("Invalid email format")
       .required("Email is required"),
-    date: Yup.string()
+      date: Yup.string()
       .matches(
-        /^\d{2}\/\d{2}\/\d{4}$/,
-        "Date format should be DD/MM/YYYY (e.g., 25/12/2024)"
+        /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[0-2])[\/\-]((19|20)?\d{2})$/,
+        "Date format should be DD/MM/YYYY or DD-MM-YYYY (e.g., 25/12/2024 or 25-1-2025)"
       )
+    
       .required("Date is required"),
     time: Yup.string()
       .matches(
@@ -41,7 +42,7 @@ const ReservationForm = () => {
   };
 
   return (
-    <div className="reservation-container">
+    <div id="reservation-section"className="reservation-container">
       {/* Reservation Image */}
       <div className="reservation-image">
         <img

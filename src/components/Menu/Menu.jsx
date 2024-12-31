@@ -22,7 +22,7 @@ const Menu = () => {
 
     ],
     lunch: [
-      { id: 9, name: "Grilled Steak", price: "$130", description: "Ipsum ipsum clita erat amet dolor justo diam",image: "/menu-4.jpg"  },
+      { id:  9, name: "Grilled Steak", price: "$130", description: "Ipsum ipsum clita erat amet dolor justo diam",image: "/menu-4.jpg"  },
       { id: 10, name: "Pasta", price: "$125", description: "Ipsum ipsum clita erat amet dolor justo diam",image: "/menu-5.jpg"  },
       { id: 11, name: "Pasta", price: "$125", description: "Ipsum ipsum clita erat amet dolor justo diam",image: "/menu-6.jpg"  },
       { id: 12, name: "Grilled Steak", price: "$130", description: "Ipsum ipsum clita erat amet dolor justo diam",image: "/menu-2.jpg"  },

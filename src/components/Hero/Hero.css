@@ -5,7 +5,7 @@
   background-attachment: fixed;
   height: 100vh;
   width: 100%;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden; 
 }
 
 .h-wrapper {
@@ -30,7 +30,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 100%;
   gap: 50px;
   padding: 0 2rem;
@@ -39,7 +38,7 @@
 
 .hero-title h1 {
   font-weight: 700;
-  font-size: 2rem; /* Adjust font size for smaller devices */
+  font-size: 2rem; 
   line-height: 1.2;
   margin-bottom: 1rem;
 }
@@ -70,7 +69,7 @@
 }
 
 .image-container {
-  width: 15rem; /* Adjust image size for smaller devices */
+  width: 15rem; 
   height: 15rem;
   overflow: hidden;
   border-radius: 50%;
@@ -93,7 +92,7 @@
   }
 }
 
-/* Media queries for different screen sizes */
+
 
 
 @media (min-width: 1024px) {
@@ -139,11 +138,11 @@
     margin-right: 60px;
   }
   .search-bar .button {
-    margin-right: 45px; /* Keeps the right margin */
-    padding: 7px 14px;  /* Reduces padding for a smaller appearance */
-    font-size: 20px;    /* Decreases the font size */
-    height: 40px;       /* Adjusts the height */
-    width: auto;        /* Ensures the width adapts to content */
+    margin-right: 45px; 
+    padding: 7px 14px;  
+    font-size: 20px;    
+    height: 40px;       
+    width: auto;        
 }
 
 
@@ -161,14 +160,23 @@
 @media screen and (max-width: 375px) {
   .hero-title h1 {
     font-size: 2rem;
-    margin-right: 40px;
+    margin-right: 10px;
   }
   .image-container {
     width: 20rem;
     height: 20rem;
     overflow: hidden;
-  }
+    margin-right: 10px;
 
+  }
+  .hero-des p {
+    margin-right: 10px;
+  }
+  .search-bar{
+    margin-left: 35px;
+
+
+  }
   .hero-wrapper1 {
    
     height: 150vh;
@@ -176,4 +184,59 @@
     overflow: hidden; /* Prevent scrolling */
 
 }
+
+}
+
+@media screen and (max-width: 414px) {
+  .hero-title h1 {
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+  .image-container {
+    overflow: hidden;
+    margin-right: 10px;
+
+  }
+  .hero-des p {
+    margin-right: 10px;
+  }
+  .search-bar{
+    margin-left: 35px;
+
+
+  }
+  .hero-wrapper1 {
+   
+    width: 100%;
+    overflow: hidden; /* Prevent scrolling */
+
+}
+
+}
+
+@media screen and (max-width: 430px) {
+  .hero-title h1 {
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+  .image-container {
+    overflow: hidden;
+    margin-right: 10px;
+
+  }
+  .hero-des p {
+    margin-right: 10px;
+  }
+  .search-bar{
+    margin-left: 35px;
+
+
+  }
+  .hero-wrapper1 {
+   
+    width: 100%;
+    overflow: hidden; /* Prevent scrolling */
+
+}
+
 }

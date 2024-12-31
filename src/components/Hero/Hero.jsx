@@ -25,9 +25,16 @@ const Hero = () => {
             </p>
           </div>
           <div className="search-bar">
-            <button className="button">
-              <a href="#">Book A Table</a>
-            </button>
+          <button className="button" onClick={() => 
+          {
+               const section = document.getElementById("reservation-section");
+              if (section) 
+                {
+                     section.scrollIntoView({ behavior: "smooth" });
+                 }
+                   }}>   
+                       Book A Table
+                   </button>
           </div>
         </div>
 
