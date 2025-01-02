@@ -32,7 +32,6 @@ const ContectForm = () => {
     ),
   });
 
-  // Submit Handler
   const onSubmit = (values, { resetForm }) => {
     console.log("Submitted Values:", values);
     setIsModalOpen(true);
@@ -41,7 +40,6 @@ const ContectForm = () => {
 
   return (
     <div>
-      {/* Contact Information Section */}
       <div className="contact-info-section">
         <h1 className="menu-title">Contact Us</h1>
         <h2>Contact For Any Query</h2>

@@ -26,6 +26,10 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <section className={`h-wrapper ${isScrolled ? "scrolled" : ""}`}>
       <div className="flexCenter paddings innerWidth h-container">
@@ -40,20 +44,26 @@ const Header = () => {
         </button>
 
         <div className={`h-menu ${isMenuOpen ? "open" : ""}`}>
-          <Link to="/" >Home</Link>
-          <Link to="/contact-us" >Contact Us</Link>
-          
-          <button className="button" onClick={() => 
-          {
-               const section = document.getElementById("reservation-section");
-              if (section) 
-                {
-                     section.scrollIntoView({ behavior: "smooth" });
-                 }
-                   }}>   
-                       Book A Table
-                   </button>
-
+          <Link to="/" onClick={() => {
+              const section = document.getElementById("menu");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+              closeMenu(); 
+            }} >Home</Link>
+          <Link to="/contact-us" onClick={closeMenu}>Contact Us</Link>
+          <button
+            className="button"
+            onClick={() => {
+              const section = document.getElementById("reservation-section");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+              closeMenu(); 
+            }}
+          >
+            Book A Table
+          </button>
         </div>
       </div>
     </section>

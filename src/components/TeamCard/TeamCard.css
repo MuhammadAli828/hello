@@ -1,9 +1,11 @@
+/* Team container styles */
 .team-container {
   text-align: center;
   padding: 5rem;
   background-color: white;
 }
 
+/* Team heading styles */
 .team-heading {
   font-size: 2rem;
   margin-bottom: 5rem;
@@ -25,17 +27,22 @@
   gap: 2rem;
 }
 
+/* Team card styles */
 .team-card {
   background-color: white;
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
-  width: 280px;
-  transition: transform 0.3s ease-in-out;
+  width: 290px;
+  height: 380px;
+  position: relative;
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
-
+.team-card:hover {
+  height: 420px; 
+}
 
 .team-image-container {
   width: 100%;
@@ -44,7 +51,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f9f9f9;
+  background-color:white;
 }
 
 .team-image {
@@ -69,20 +76,21 @@
 }
 
 .team-social {
-  display: flex; 
-  visibility: hidden; 
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: none;
   justify-content: center;
   gap: 1rem;
   padding: 1rem 0;
-  transition: opacity 0.5s ease-in-out, ; 
+  transition: opacity 0.3s ease;
 }
 
 .team-card:hover .team-social {
-  display: flex; 
-  visibility: visible; 
-  opacity: 1; 
+  display: flex;
 }
-
 
 .social-icon {
   background-color: #f79521;
@@ -95,29 +103,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: default; /* Remove clickable cursor */
-  pointer-events: none; /* Disable interactions */
-  transition: background-color 0.3s;
-}
-
-.social-icon:hover {
-  background-color: #e0861a;
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .team-grid {
-    gap: 1rem;
-  }
-
-  .team-card {
-    width: 220px;
-  }
-
-  .team-image-container {
-    height: 220px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -126,7 +111,12 @@
   }
 
   .team-card {
-    width: 180px;
+    width: 230px;
+    height: 280px; 
+  }
+  
+  .team-card:hover {
+    height: 320px; 
   }
 
   .team-image-container {

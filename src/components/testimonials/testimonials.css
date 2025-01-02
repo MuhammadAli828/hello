@@ -4,6 +4,7 @@
   padding: 3rem;
   background-color: #f9f9f9;
   font-family: Arial, sans-serif;
+margin-top: 100px;
 }
 
 .testimonial-header h5 {
@@ -26,19 +27,19 @@
   flex-wrap: wrap;
 }
 
-/* Testimonial Card */
+
 .testimonial-card {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   width: 300px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:transform 0.3s ease;
   position: relative;
 }
 
 .testimonial-card:hover {
-  background-color: #f79521; /* Orange background on hover */
+  background-color: #f79521; 
   color: white;
   transform: translateY(-10px);
 }
@@ -93,7 +94,7 @@
 .testimonial-card:hover .client-profession {
   color: #fff;
 }
-/* Testimonial Section */
+
 .testimonial-container {
   padding: 3rem;
 }
