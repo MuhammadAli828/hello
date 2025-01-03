@@ -47,9 +47,15 @@ const TeamCard = () => {
               <p className="team-designation">{member.designation}</p>
             </div>
             <div className="team-social">
-              <span className="social-icon"><i className="fa-brands fa-facebook"></i></span>
-              <span className="social-icon"><i className="fa-brands fa-x-twitter"></i></span>
-              <span className="social-icon"><i className="fa-brands fa-instagram"></i></span>
+              <span className="social-icon">
+                <i className="fa-brands fa-facebook"></i>
+              </span>
+              <span className="social-icon">
+                <i className="fa-brands fa-twitter"></i>
+              </span>
+              <span className="social-icon">
+                <i className="fa-brands fa-instagram"></i>
+              </span>
             </div>
           </div>
         ))}
