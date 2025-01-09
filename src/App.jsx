@@ -1,40 +1,39 @@
+
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AboutUs from "./components/AboutUs/AboutUs";
-import Features from "./components/Features/Features";
+import { Provider } from 'react-redux';
+import store from './components/redusx/store.jsx'; // Ensure the path is correct
+import './components/redusx/Counter.css'; // Import Counter CSS
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
+import Features from "./components/Features/Features";
+import AboutUs from "./components/AboutUs/AboutUs";
 import Menu from "./components/Menu/Menu";
 import TeamCard from "./components/TeamCard/TeamCard";
 import ReservationForm from "./components/ReservationForm/ReservationForm";
 import Testimonials from "./components/testimonials/testimonials";
-import ContactUs from "./components/ContactUs/ContactUs"; // Import ContactUs component
-import "react-toastify/dist/ReactToastify.css";
-import ContectForm from "./components/ContectForm/ContectForm";
 import Footer from "./components/Footer/Footer";
 import GoToTop from "./components/GoToTop/GoToTop";
+import ContactUs from "./components/ContactUs/ContactUs"; // Import ContactUs component
+import ContectForm from "./components/ContectForm/ContectForm";
+import Counter from './components/redusx/Counter.jsx'; // Adjust the path
 
-
-// Define router with routes for Home and Contact Us pages
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <div>
-      
         <Header />
-        <Hero/>
+        <Hero />
         <Features />
         <AboutUs />
         <Menu />
         <ReservationForm />
         <TeamCard />
         <Testimonials />
-        <Footer/>
-        <GoToTop/>
-      
-      
-        
+        <Counter /> {/* Render Counter here */}
+        <Footer />
+        <GoToTop />
       </div>
     ),
   },
@@ -44,16 +43,20 @@ const router = createBrowserRouter([
       <div>
         <Header />
         <ContactUs />
-        <ContectForm/>
-        <Footer/>
-        <GoToTop/>
+        <ContectForm />
+        <Footer />
+        <GoToTop />
       </div>
     ),
   },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  );
 }
 
 export default App;
